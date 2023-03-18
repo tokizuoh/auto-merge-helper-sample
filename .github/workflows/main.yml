@@ -11,6 +11,8 @@ jobs:
   auto-merge-helper:
     runs-on: ubuntu-latest
     steps:
+      - run: echo $GITHUB_REPOSITORY
+      - run: echo $GITHUB_SHA
       - run: curl -s https://api.github.com/repos/tokizuoh/auto-merge-helper/releases/latest | jq -r '.assets[0].browser_download_url' | xargs curl -LJO
       - run: chmod +x ./sample
       - run: ./sample
