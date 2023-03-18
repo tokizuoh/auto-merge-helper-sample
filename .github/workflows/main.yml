@@ -7,7 +7,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!" #
       - run: exit 0
   auto-merge-helper:
     runs-on: ubuntu-latest
