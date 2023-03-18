@@ -8,3 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
+  auto-merge-helper:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -s https://api.github.com/repos/tokizuoh/auto-merge-helper/releases/latest | jq -r '.assets[0].browser_download_url' | xargs curl -LJO
+      - run: ./sample
