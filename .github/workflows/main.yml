@@ -13,6 +13,7 @@ jobs:
     steps:
       - run: curl -s https://api.github.com/repos/tokizuoh/auto-merge-helper/releases/latest | jq -r '.assets[0].browser_download_url' | xargs curl -LJO
       - run: chmod +x ./sample
+      - run: sleep 60
       - run: ./sample
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
