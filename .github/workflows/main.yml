@@ -1,8 +1,7 @@
 name: main
 
 on:
-  check_run:
-    types: [completed]
+  status
 
 jobs:
   test:
