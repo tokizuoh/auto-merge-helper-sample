@@ -1,7 +1,8 @@
 name: main
 
 on:
-  push
+  check_run:
+    types: [completed]
 
 jobs:
   test:
